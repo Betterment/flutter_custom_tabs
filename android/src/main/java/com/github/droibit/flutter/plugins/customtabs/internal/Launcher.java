@@ -121,8 +121,8 @@ import java.util.regex.Pattern;
     }
   }
 
-  public void launch(@NonNull Context context, @NonNull Uri uri,
-      @NonNull CustomTabsIntent customTabsIntent, @Nullable List<String> extraCustomTabs) {
+  public void launch(@NonNull Uri uri, @NonNull CustomTabsIntent customTabsIntent,
+      @Nullable List<String> extraCustomTabs) {
     final CustomTabsFallback fallback;
     if (extraCustomTabs != null && !extraCustomTabs.isEmpty()) {
       fallback = new LaunchNonChromeCustomTabs(extraCustomTabs);
